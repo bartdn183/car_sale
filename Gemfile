@@ -11,6 +11,8 @@ gem 'aws-sdk'
 gem 'select2-rails'
 gem 'hirb'
 gem 'jquery-easing-rails'
+gem 'mail_form'
+gem 'figaro'
 
 gem 'jquery-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
