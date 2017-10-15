@@ -27,9 +27,23 @@ $(this).remove();
 });
 }, 8000);
 
+$(document).on('turbolinks:load', function() {
+	$("#devise-button").click(function(){
+		if ($(".signup_vebar").css('display') == "none") {
+	  		$(".signup_vebar").show(1000);
+	  		$(".signin_vebar").hide(750);
+	  		$(this).html("Click here for login");
+	  	} else {
+	  	    $(".signup_vebar").hide(750);
+	  		$(".signin_vebar").show(1000);
+	  		$(this).html("Click here to create a new account");
+	  	};
+	});
 
-$(document).ready(function() {
 	$("select.dropdown-selector").select2({
 		theme: "bootstrap"
 	});
 });
+
+
+

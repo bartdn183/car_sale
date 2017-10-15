@@ -16,7 +16,8 @@ class ControlCenterController < ApplicationController
   def devise_mapping
     @devise_mapping ||= Devise.mappings[:user]
   end
-  
+
   def index
+  	@minimum_password_length = 6
   end
 end

@@ -1,3 +1,29 @@
 <%= render 'devise/navbar' %>
+<div class="jumbotron" style="padding-top: 120px;">
+  <% if !current_user %>
+	<div class="row">
+		<div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
 
-<%= render 'sign_in' %>
+			<div id="devise-box">
+				<div style="margin-bottom: 20px;">
+					<button class="btn btn-xl btn-block" id="devise-button" style="background: darkgreen;">Click here to create a new account</button>
+				</div>
+				<hr>
+				<div>
+					<h4 class="header-title signin_vebar"><b>Log in here</b></h4>
+					<h4 class="header-title signup_vebar" style="display:none;"><b>Create a new account here</b></h4>
+					<div class="signin_vebar">
+						<%= render 'sign_in' %>
+					</div>
+					<div class="signup_vebar" style="display: none;">
+						<%= render 'sign_up' %>
+					</div>
+				</div>
+			  </div>
+
+
+
+		</div>
+	</div>
+  <% end %>
+</div>
